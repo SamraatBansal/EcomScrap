@@ -1,0 +1,7 @@
+google-search-results
+crawl4ai
+together
+pydantic
+python-dotenv
+rich
+pytest-playwright

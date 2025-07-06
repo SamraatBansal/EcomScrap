@@ -1,0 +1,6 @@
+.env
+venv/
+webOutput.json
+result.json
+output.json
+outputIN.json
