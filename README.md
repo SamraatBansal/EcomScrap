@@ -86,7 +86,9 @@ python app.py --location "JP" --query "matcha powder"
   │ Ola S1 Pro+                 │  148999.0 │   INR    │ https://www.olaelectric.com/s1-pro                              │
   └─────────────────────────────┴───────────┴──────────┴─────────────────────────────────────────────────────────────────┘
   ```
-   
+  
+   <img width="1263" alt="Screenshot 2025-07-07 at 5 51 00 AM" src="https://github.com/user-attachments/assets/5f9dac49-1a79-4390-8917-6c8ca1aafc16" />
+
 
 - Searching for "matcha powder" in Japan:
   ```bash
