@@ -32,6 +32,7 @@ These configurations ensure optimal performance and ease of use when running the
 
 ### Prerequisites
 - Python 3.9+ (Developed with: Python 3.9.6)
+- Chromimum should be installed via playwright
 - Virtual environment setup (recommended)
 
 ### Installation
