@@ -27,11 +27,11 @@ def perform_search(location_code, product):
     params = {
         "api_key": api_key,
         "engine": "google",
-        "q": "Buy " + product + " online",
+        "q": "Buy " + product,
         "location": location_name,
         "gl": normalized_code,
         "hl": "en",
-        "num": int(os.getenv("DESIRED_RESULT_LENGTH", 10)) * 2,
+        "num": int(os.getenv("DESIRED_RESULT_LENGTH", 3)),
         "safe": "active"
     }
 

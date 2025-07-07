@@ -27,7 +27,7 @@ async def crawl_streaming(urls, query):
         # Process each URL individually
         for url in urls:
             # Only continue if results_list's length is less than desired result length from env
-            if len(markdowns) >= int(os.getenv("DESIRED_RESULT_LENGTH", 10)) * 2:
+            if len(markdowns) >= int(os.getenv("DESIRED_RESULT_LENGTH", 3)):
                 break
             result = await crawler.arun(
                 url=url,

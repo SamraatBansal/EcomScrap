@@ -7,6 +7,7 @@ from rich.console import Console
 from rich.table import Table
 from search import perform_search
 from crawler import crawl_streaming
+from urllib.parse import urlparse
 
 load_dotenv()
 console = Console()
@@ -36,8 +37,16 @@ if __name__ == '__main__':
         console.print(f"[bold red]Error:[/] Failed to write to {output_file}. Reason: {e}")
 
     if 'organic_results' in search_results:
-        urls_to_crawl = [result['link'] for result in search_results['organic_results']]
-        desired_result_length = int(os.getenv("DESIRED_RESULT_LENGTH", 5)) * 2
+        urls_to_crawl = []
+        seen_hosts = set()
+        for result in search_results['organic_results']:
+            url = result['link']
+            host = urlparse(url).netloc
+            if host not in seen_hosts:
+                seen_hosts.add(host)
+                urls_to_crawl.append(url)
+
+        desired_result_length = int(os.getenv("DESIRED_RESULT_LENGTH", 3))
         urls_to_crawl = urls_to_crawl[:desired_result_length]
 
         sorted_results_list = asyncio.run(crawl_streaming(urls_to_crawl, args.query))

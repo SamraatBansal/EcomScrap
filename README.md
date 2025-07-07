@@ -71,6 +71,21 @@ python app.py --location "JP" --query "matcha powder"
 
   <img width="1274" alt="Screenshot 2025-07-07 at 5 36 45 AM" src="https://github.com/user-attachments/assets/88580837-a36c-4962-b785-6680062df170" />
 
+- Searching for "Ola S1 Pro Electric" in India:
+  ```bash
+  python app.py --location "IN" --query "Ola S1 Pro Electric"
+  ```
+  
+  Output:
+  ```
+  Scraped Products
+  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+  ┃ Name                        ┃     Price ┃ Currency ┃ URL                                                             ┃
+  ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+  │ OLA S1 Pro Electric Scooter │ 129999.00 │   INR    │ https://www.amazon.in/OLA-S1-Pro-Electric-Scooter/dp/B0DF2XPD8N │
+  │ Ola S1 Pro+                 │  148999.0 │   INR    │ https://www.olaelectric.com/s1-pro                              │
+  └─────────────────────────────┴───────────┴──────────┴─────────────────────────────────────────────────────────────────┘
+  ```
    
 
 - Searching for "matcha powder" in Japan:
