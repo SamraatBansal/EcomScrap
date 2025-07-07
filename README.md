@@ -20,10 +20,10 @@ EcomScrap relies on several key dependencies to function effectively:
 The following are the preferred configurations used in the `.env` file:
 
 - **DESIRED_RESULT_LENGTH**: Set to `3` to control the number of results processed.
-- **SERPAPI_API_KEY**: Your SerpAPI key for accessing Google search results.
-- **TOGETHER_API_KEY**: Your Together API key for LLM processing.
+- **SERPAPI_API_KEY**: Your SerpAPI key for accessing Google search results. (https://serpapi.com/)
+- **TOGETHER_API_KEY**: Your Together API key for LLM processing. (https://www.together.ai/)
 - **SAVE_MARKDOWN_FILES**: Set to `false` to avoid saving markdown files unless needed.
-- **LLM_MODEL**: Using `meta-llama/Llama-3.3-70B-Instruct-Turbo` for LLM processing.
+- **LLM_MODEL**: Using `meta-llama/Llama-3.3-70B-Instruct-Turbo` for LLM processing. (Choose from: https://docs.together.ai/docs/json-mode)
 - **WEBOUTPUT_FILENAME**: The output filename for search results, default is `webOutput.json`.
 
 These configurations ensure optimal performance and ease of use when running the EcomScrap tool.
