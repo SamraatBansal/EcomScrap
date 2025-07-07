@@ -3,6 +3,31 @@
 ## Overview
 EcomScrap is a tool designed to scrape e-commerce websites to extract structured product data such as product name, price, currency, and URL. It utilizes the Together API with the meta-llama/Llama-3.3-70B-Instruct-Turbo model for accurate data parsing. The tool performs web crawling using `crawl4ai` and integrates with SerpAPI for Google search results.
 
+## Dependencies
+
+EcomScrap relies on several key dependencies to function effectively:
+
+- `together` Python SDK: Used for LLM calls to the Together API.
+- `crawl4ai`: For asynchronous web crawling.
+- `google-search-results`: To fetch Google search results (SerpAPI).
+- `pydantic`: For data validation.
+- `rich`: For enhanced CLI output.
+- `python-dotenv`: To manage environment variables.
+- `argparse`: For parsing CLI arguments.
+
+## Preferred Configurations
+
+The following are the preferred configurations used in the `.env` file:
+
+- **DESIRED_RESULT_LENGTH**: Set to `3` to control the number of results processed.
+- **SERPAPI_API_KEY**: Your SerpAPI key for accessing Google search results.
+- **TOGETHER_API_KEY**: Your Together API key for LLM processing.
+- **SAVE_MARKDOWN_FILES**: Set to `false` to avoid saving markdown files unless needed.
+- **LLM_MODEL**: Using `meta-llama/Llama-3.3-70B-Instruct-Turbo` for LLM processing.
+- **WEBOUTPUT_FILENAME**: The output filename for search results, default is `webOutput.json`.
+
+These configurations ensure optimal performance and ease of use when running the EcomScrap tool.
+
 ## Installation and CLI Guide
 
 ### Prerequisites
