@@ -24,16 +24,14 @@ async def crawl_streaming(urls, query):
     results_list = []  # Collect outputs here
 
     async with AsyncWebCrawler(config=browser_config) as crawler:
-        # Process each URL individually
-        for url in urls:
-            # Only continue if results_list's length is less than desired result length from env
-            if len(markdowns) >= int(os.getenv("DESIRED_RESULT_LENGTH", 3)):
-                break
-            result = await crawler.arun(
-                url=url,
-                config=run_config,
-                # dispatcher=dispatcher
-            )
+        result_container = await crawler.arun_many(urls, config=run_config)
+        results = []
+        if isinstance(result_container, list):
+            results = result_container
+        else:
+            async for res in result_container:
+                results.append(res)
+        for result in results:
             if result.success:
                 markdowns.append((result.markdown, result.url))
                 # Write markdown to file if enabled by environment variable
