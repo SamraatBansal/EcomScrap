@@ -27,7 +27,7 @@ async def crawl_streaming(urls, query):
         # Process each URL individually
         for url in urls:
             # Only continue if results_list's length is less than desired result length from env
-            if len(markdowns) >= int(os.getenv('DESIRED_RESULT_LENGTH', '5')):
+            if len(markdowns) >= int(os.getenv("DESIRED_RESULT_LENGTH", 10)) * 2:
                 break
             result = await crawler.arun(
                 url=url,
@@ -50,12 +50,21 @@ async def crawl_streaming(urls, query):
         try:
             output = process_markdown_with_llm(markdown, query, url)
             results_list.append(output)
+            # Check if results_list has reached desired length
+            if len(results_list) >= int(os.getenv("DESIRED_RESULT_LENGTH", 5)):
+                break
         except Exception as e:
             print(f"Failed to process markdown for {url}: {str(e)}")
 
-    # Sort results_list by ascending order of price
+    def is_valid_float(value):
+        try:
+            float(value)
+            return True
+        except ValueError:
+            return False
+
     sorted_results_list = sorted(
-        (item for item in results_list if item.get('price') and item['price'].replace('.', '', 1).isdigit()),
+        (item for item in results_list if item.get('price') and is_valid_float(item['price'])),
         key=lambda x: float(x['price'])
     )
 

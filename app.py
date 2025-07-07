@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
     if 'organic_results' in search_results:
         urls_to_crawl = [result['link'] for result in search_results['organic_results']]
-        desired_result_length = int(os.getenv("DESIRED_RESULT_LENGTH", 3))
+        desired_result_length = int(os.getenv("DESIRED_RESULT_LENGTH", 5)) * 2
         urls_to_crawl = urls_to_crawl[:desired_result_length]
 
         sorted_results_list = asyncio.run(crawl_streaming(urls_to_crawl, args.query))

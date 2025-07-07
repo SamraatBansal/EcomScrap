@@ -69,3 +69,21 @@ python app.py --location "JP" --query "matcha powder"
   └─────────────────────────────────────┴───────┴──────────┴───────────────────────────────────────────────────────────────────────────┘
   Sorted results successfully saved to result.json
   ```
+
+## Example CLI Output
+
+Here's an example of the CLI output when running the scraper for "iphone 16 Pro, 128GB":
+   ```bash
+   python app.py --location "US" --query "iphone 16 Pro, 128GB"
+   ```
+
+   ```
+   Scraped Products
+   ┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+   ┃ Name                ┃  Price ┃ Currency ┃ URL                                                                                                ┃
+   ┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+   │ Apple iPhone 16 Pro │ 749.99 │   USD    │ https://www.amazon.com/Apple-iPhone-Version-128GB-Titanium/dp/B0DHJG6JPH                           │
+   │ iPhone 16 Pro       │ 999.00 │   USD    │ https://www.apple.com/shop/buy-iphone/iphone-16-pro                                                │
+   │ iPhone 16 Pro       │ 999.00 │   USD    │ https://www.apple.com/shop/buy-iphone/iphone-16-pro/6.3-inch-display-128gb-black-titanium-unlocked │
+   └─────────────────────┴────────┴──────────┴────────────────────────────────────────────────────────────────────────────────────────────────────┘
+   ```
