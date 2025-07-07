@@ -68,7 +68,10 @@ python app.py --location "JP" --query "matcha powder"
    │ iPhone 16 Pro       │ 999.00 │   USD    │ https://www.apple.com/shop/buy-iphone/iphone-16-pro/6.3-inch-display-128gb-black-titanium-unlocked │
    └─────────────────────┴────────┴──────────┴────────────────────────────────────────────────────────────────────────────────────────────────────┘
    ```
-   <img width="1268" alt="Screenshot 2025-07-07 at 5 30 05 AM" src="https://github.com/user-attachments/assets/50171bb2-250f-4f50-afaa-ddaef5758b4c" />
+
+  <img width="1274" alt="Screenshot 2025-07-07 at 5 36 45 AM" src="https://github.com/user-attachments/assets/88580837-a36c-4962-b785-6680062df170" />
+
+   
 
 - Searching for "matcha powder" in Japan:
   ```bash
