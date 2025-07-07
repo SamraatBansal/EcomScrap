@@ -76,6 +76,9 @@ python app.py --location "JP" --query "matcha powder"
 3. **Processing**: The markdown content is processed using the Together API to extract product information.
 4. **Output**: The extracted data is sorted by price and saved to `result.json`. The console output is styled using `rich` for better readability.
 
+<img width="1301" alt="Screenshot 2025-07-07 at 6 41 35 AM" src="https://github.com/user-attachments/assets/1dbd9046-086f-4259-a486-038d8e997e7e" />
+
+
 ## Example CLI Output
 
 - **Here's an example of the CLI output when running the scraper for "iphone 16 Pro, 128GB":**
