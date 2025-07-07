@@ -31,7 +31,7 @@ These configurations ensure optimal performance and ease of use when running the
 ## Installation and CLI Guide
 
 ### Prerequisites
-- Python 3.9+
+- Python 3.9+ (Developed with: Python 3.9.6)
 - Virtual environment setup (recommended)
 
 ### Installation
